@@ -1,16 +1,23 @@
-#!/usr/bin/python
-
 import os
 import time
 import random
 
 random.seed()
 
-n = random.uniform(0,6)
-time.sleep(n)
-print "Content-type: text/html\r\n\r\n";
+# Generate random delay between 0 and 6 seconds
+delay = random.uniform(0, 6)
 
-print "Delayed response by "+ str(n) + " seconds"
-print "<font size=+1>Environment</font><\br>";
-for param in os.environ.keys():
-   print "<b>%20s</b>: %s<\br>" % (param, os.environ[param])
+# Simulate the delay
+time.sleep(delay)
+
+# Print headers for a basic HTML response
+print("Content-type: text/html\r\n\r\n")
+
+# Print message with the delay value
+print(f"Delayed response by {delay} seconds")
+
+# Print environment information
+print("<font size=+1>Environment</font><br>")
+for param, value in os.environ.items():
+    # Improved formatting with f-strings and alignment
+    print(f"<b>{param:20s}</b>: {value}<br>")
