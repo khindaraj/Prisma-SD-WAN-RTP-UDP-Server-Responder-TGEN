@@ -2,6 +2,7 @@
 
 import socket
 from argparse import ArgumentParser  # Use `import` for modules
+from socket import AF_INET, SOCK_DGRAM
 
 ECHO_PORT = 6100
 BUFSIZE = 1024
