@@ -22,7 +22,7 @@ if __name__ == "__main__":
   args = parser.parse_args()
 
   # Create a UDP socket
-  s = socket(AF_INET, SOCK_DGRAM)
+  s = socket.socket(AF_INET, SOCK_DGRAM)
 
   # Bind the socket to the specified IP and port
   s.bind((args.ip, args.port))
