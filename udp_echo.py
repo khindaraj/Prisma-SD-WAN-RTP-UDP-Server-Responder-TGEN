@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import socket
 from argparse import ArgumentParser  # Use `import` for modules
 
