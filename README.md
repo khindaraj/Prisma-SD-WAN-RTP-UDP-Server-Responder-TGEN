@@ -12,9 +12,9 @@ hw.sh and get_env.py = scripts to be hosted on the server that the webpos.sh scr
 #### Requirements
 
 * Ubuntu 18.04 or similar
-* Python <= 2.7 
+* Python3
 * Python modules:
-  * scapy >= 2.4.3
+  * scapy 
 * curl 
 * Apahce2
 * Apache modules:
@@ -24,21 +24,3 @@ hw.sh and get_env.py = scripts to be hosted on the server that the webpos.sh scr
 #### License
 
 MIT
-
-#### Installation
-
-1. Install and configure Apache2 to support CGI pages (e.g https://code-maven.com/set-up-cgi-with-apache)
-2. Upload hw.sh and get_env.sh to /usr/lib/cgi-bin
-3. Create directory /root/scripts 
-4. Upload udp_echo.py and udp_echo.sh /root/scripts
-5. Upload rc.local to /etc (if already present - can just edit if one exists for other purposes)
-6. Make all scripts and rc.local file executable (chmod +x *.*)
-7. Ensure all requirements above are met
-8. Reboot
-
-
-#### Version
-
-| Version | Build | Changes |
-| ------- | ----- | ------- |
-| **1.0.0** | **b1** | Initial Release. |
