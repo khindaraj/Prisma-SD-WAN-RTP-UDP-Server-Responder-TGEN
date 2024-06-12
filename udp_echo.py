@@ -1,5 +1,5 @@
-import argparse
-from socket import *
+import socket
+from argparse import ArgumentParser  # Use `import` for modules
 
 ECHO_PORT = 6100
 BUFSIZE = 1024
@@ -7,7 +7,7 @@ BUFSIZE = 1024
 if __name__ == "__main__":
 
   # Parse arguments
-  parser = argparse.ArgumentParser()
+  parser = ArgumentParser()  # Correct syntax
 
   # Allow Controller modification and debug level sets.
   binding_group = parser.add_argument_group('Binding', 'These options change how traffic is bound.')
