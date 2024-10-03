@@ -1,0 +1,17 @@
+[Unit]
+Description=UDP Echo Script - /home/lab-user/scripts/Prisma-SD-WAN-RTP-UDP-Server-Responder-TGEN/udp_echo.py
+After=network.target
+
+[Service]
+Type=simple
+User=lab-user
+#WorkingDirectory=/home/lab-user/scripts/Prisma-SD-WAN-RTP-UDP-Server-Responder-TGEN
+ExecStart=/usr/bin/python3 /home/lab-user/scripts/Prisma-SD-WAN-RTP-UDP-Server-Responder-TGEN/udp_echo.py
+Restart=always
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogLevel=info
+
+[Install]
+WantedBy=multi-user.target
